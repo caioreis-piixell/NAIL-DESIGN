@@ -131,6 +131,8 @@ Whenever a new module (such as a component, hook, or utility) or a new page is a
 5. **If you need a reusable button, add it to `src/components/ui/button.tsx`.**
 
 ## Sabrine Reis website
-- `src/pages/Index.tsx` opens the self-contained site at `public/sabrine/index.html`.
-- `public/sabrine/` contains the Portuguese responsive site, styles, WhatsApp form logic and authorized portrait/work images. Vite copies it unchanged into the production output.
-- `SABRINE.md` documents deployment, data handling and booking limitations. The site can also be hosted independently by uploading the contents of `public/sabrine/` to the hosting root.
+- `src/pages/Index.tsx` exports the native React page from `src/pages/sabrine/index.tsx`.
+- `src/pages/sabrine/booking.ts` validates requests and builds WhatsApp messages; event listeners are removed on unmount.
+- `src/pages/sabrine/style.css` styles the responsive page; `assets/` contains the authorized images bundled by Vite.
+- Both `/` and `/sabrine/index.html` render this page, keeping old preview URLs functional without redirecting.
+- `public/sabrine/` is retained only as an independent static hosting export. The React preview does not depend on that directory.

@@ -7,6 +7,7 @@ export const routers = [
     name: "home",
     element: <Index />,
   },
+  { path: "/sabrine/index.html", name: "sabrine-legacy", element: <Index /> },
   /* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */
   {
     path: "*",

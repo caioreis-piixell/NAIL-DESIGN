@@ -19,4 +19,4 @@ O formulário não persiste dados, não usa analytics e apenas monta um link wa.
 O link fornecido não pôde ser visualizado. Este repositório contém uma implementação independente; não foi verificada sincronização com o projeto Converge.
 
 ## Integração no Converge
-A estrutura React/Vite foi preservada na branch enter-main. A página inicial abre /sabrine/index.html, entregue pela pasta public/sabrine. Para hospedagem independente, basta publicar o conteúdo de public/sabrine na raiz. Não requer instalação ou build para essa publicação estática. A publicação no Converge precisa ser conferida no painel.
+A estrutura React/Vite é preservada na branch enter-main. A página é um componente React nativo; as rotas / e /sabrine/index.html renderizam o mesmo site sem redirecionamento. Imagens são importadas pelo Vite e entram no bundle. A pasta public/sabrine permanece como exportação estática independente. A publicação pública deve ser conferida no painel.
