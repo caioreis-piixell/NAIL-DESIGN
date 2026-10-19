@@ -129,3 +129,8 @@ Whenever a new module (such as a component, hook, or utility) or a new page is a
    <Route path="/profile" element={<Profile />} />
    ```
 5. **If you need a reusable button, add it to `src/components/ui/button.tsx`.**
+
+## Sabrine Reis website
+- `src/pages/Index.tsx` opens the self-contained site at `public/sabrine/index.html`.
+- `public/sabrine/` contains the Portuguese responsive site, styles, WhatsApp form logic and authorized portrait/work images. Vite copies it unchanged into the production output.
+- `SABRINE.md` documents deployment, data handling and booking limitations. The site can also be hosted independently by uploading the contents of `public/sabrine/` to the hosting root.

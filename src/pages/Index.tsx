@@ -1,23 +1,13 @@
-import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
 
+/** Opens the self-contained Portuguese booking site, also deployable without React. */
 const Index = () => {
-  const { t } = useTranslation();
-
-  return (
-    <div className="relative flex h-full w-full flex-col bg-gradient-to-b from-[#4E54C8] to-[#A8C0FF] p-[32px] max-md:pb-[32px] max-md:pl-[20px] max-md:pr-[20px] max-md:pt-[32px]">
-      <div className="text-[26px] text-white max-md:text-[22px]">
-        {t("common.appName")}
-      </div>
-      <div className="flex h-full flex-1 flex-col items-center justify-center">
-        <div className="text-center text-[48px] text-white max-md:text-[26px]">
-          {t("home.hero.title")}
-        </div>
-        <div className="text-center text-[24px] text-white max-md:text-[16px]">
-          {t("home.hero.subtitle")}
-        </div>
-      </div>
-    </div>
-  );
+  const destination = `${import.meta.env.BASE_URL}sabrine/index.html`;
+  useEffect(() => { window.location.replace(destination); }, [destination]);
+  return <main style={{ padding: "3rem", fontFamily: "Georgia, serif" }}>
+    <h1>Sabrine Reis</h1>
+    <p>Manicure e pedicure em Castilho–SP.</p>
+    <a href={destination}>Abrir site e solicitar atendimento</a>
+  </main>;
 };
-
 export default Index;
